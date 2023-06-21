@@ -10,3 +10,19 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log("to from => " + tofrom.value + " details " + details.value + " the amount =>");
 });
+// Classes 
+class Invoice {
+    constructor(name, prenom, age) {
+        this.name = name;
+        this.prenom = prenom;
+        this.age = age;
+    }
+    format() {
+        console.log(this.prenom);
+    }
+}
+let hakim = new Invoice("hakim", "ghernaout", 18);
+hakim.format();
+let luis = new Invoice("luis", "viewtemps", 20);
+luis.format();
+console.log(hakim, luis);

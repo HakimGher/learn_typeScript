@@ -14,3 +14,24 @@ form.addEventListener('submit', (e:Event)=>{
 
 })
 
+
+// Classes 
+    class Invoice {
+        name : String;
+        prenom : String;
+        age : number;
+
+    constructor(name : String, prenom : String , age : number){
+        this.name =  name;
+        this.prenom = prenom;
+        this.age = age;
+    }
+    format(){
+    console.log(this.prenom);    }
+    }
+
+    let hakim = new Invoice("hakim","ghernaout",18);
+    hakim.format();
+    let luis = new Invoice("luis","viewtemps",20);
+    luis.format();
+    console.log(hakim,luis);
