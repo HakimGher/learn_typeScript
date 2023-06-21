@@ -21,9 +21,9 @@ form.addEventListener('submit', (e:Event)=>{
         prenom : String;
         age : number;
 
-    constructor(name : String, prenom : String , age : number){
+    constructor(name : String, Fname : String , age : number){
         this.name =  name;
-        this.prenom = prenom;
+        this.prenom = Fname;
         this.age = age;
     }
     format(){
@@ -34,4 +34,36 @@ form.addEventListener('submit', (e:Event)=>{
     hakim.format();
     let luis = new Invoice("luis","viewtemps",20);
     luis.format();
-    console.log(hakim,luis);
+
+    // only object instanciated from Invoice class can be added to the invoices array 
+    let invoices :Invoice[] = [];
+
+    // we can change the value of class properties 
+    luis.name = "hakim";
+    hakim.name = "luis";
+
+    invoices.push(luis);
+    invoices.push(hakim);
+
+    // access the invoices array  
+    invoices.forEach(env=>{
+        console.log(env.name,env.prenom,env.age);
+    })
+    // all classes properties are public by default let's set all the propeties
+    // private
+    class prInvoice {
+
+
+    constructor(private prNamae : String,private PrFname : String
+             ,private Prage : number,readonly ReadOnly : String){
+     
+    }
+    format(){
+    console.log(
+        this.prNamae ,
+        this.PrFname,
+        this.Prage,);    }
+    }
+
+    let prhakim = new prInvoice("hakim","ghernaout",28,"readonly    ");
+    prhakim.format();
