@@ -113,3 +113,23 @@ let bio1 = (nom, prenom, age = 20) => {
 };
 let funct1 = (a) => {
 };
+// Function signature  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//example 1 
+let greet;
+greet = (name, greet) => {
+    console.log(name + "says" + greet);
+};
+//example 2 
+let calc;
+calc = (num1, num2, action) => {
+    if (action == "add")
+        return num1 + num2;
+    else {
+        return num1 - num2;
+    }
+};
+//exemple 3 
+let signObj;
+signObj = (obj) => {
+    console.log(obj.name + " and " + obj.prenom);
+};

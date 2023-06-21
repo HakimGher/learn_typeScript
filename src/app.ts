@@ -154,5 +154,29 @@ obj.age = 230;
     let funct1 = (a:numberOrString)=>{
         
     }
-// Function signature 
-    
+// Function signature  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    //example 1 
+    let greet : (greet : String , greeting : string)=> void ;
+    greet  = (name :String,greet:String)=>
+    {
+        console.log(name + "says"+ greet);
+    }
+
+    //example 2 
+    let calc : (par1 : number, par2:number , action : String)=>number ;
+    calc = (num1: number, num2: number , action : String)=>
+    {
+    if (action == "add")
+        return num1 + num2;
+    else {
+        return num1 - num2;
+    }
+    }
+
+    //exemple 3 
+    let signObj : (object : {name:String,prenom :String,}) => void;
+    signObj = (obj:{name:String, prenom :String})=>{
+        console.log(obj.name+" and "+obj.prenom); 
+         
+    }
