@@ -1,4 +1,6 @@
 "use strict"
+// import export 
+import { Invoice } from "./Invoice.js"; 
 // get the form from html 
     let form =document.querySelector(".new-item-form") as HTMLFormElement;
 
@@ -16,20 +18,8 @@ form.addEventListener('submit', (e:Event)=>{
 
 
 // Classes 
-    class Invoice {
-        name : String;
-        prenom : String;
-        age : number;
-
-    constructor(name : String, Fname : String , age : number){
-        this.name =  name;
-        this.prenom = Fname;
-        this.age = age;
-    }
-    format(){
-    console.log(this.prenom);    }
-    }
-
+// =>
+    
     let hakim = new Invoice("hakim","ghernaout",18);
     hakim.format();
     let luis = new Invoice("luis","viewtemps",20);
@@ -67,3 +57,5 @@ form.addEventListener('submit', (e:Event)=>{
 
     let prhakim = new prInvoice("hakim","ghernaout",28,"readonly    ");
     prhakim.format();
+// <=
+// Modules 

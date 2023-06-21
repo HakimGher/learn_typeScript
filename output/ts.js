@@ -1,4 +1,6 @@
 "use strict";
+// import export 
+import { Invoice } from "./Invoice.js";
 // get the form from html 
 let form = document.querySelector(".new-item-form");
 // inputs 
@@ -11,16 +13,7 @@ form.addEventListener('submit', (e) => {
     console.log("to from => " + tofrom.value + " details " + details.value + " the amount =>");
 });
 // Classes 
-class Invoice {
-    constructor(name, Fname, age) {
-        this.name = name;
-        this.prenom = Fname;
-        this.age = age;
-    }
-    format() {
-        console.log(this.prenom);
-    }
-}
+// =>
 let hakim = new Invoice("hakim", "ghernaout", 18);
 hakim.format();
 let luis = new Invoice("luis", "viewtemps", 20);
