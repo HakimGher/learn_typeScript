@@ -44,3 +44,18 @@ class prInvoice {
 }
 let prhakim = new prInvoice("hakim", "ghernaout", 28, "readonly    ");
 prhakim.format();
+let mohammed = {
+    name: "Mohammed",
+    fname: "ghernaout",
+    age: 60,
+    talk(text) {
+        console.log("my name is " + name);
+    },
+    SayAge(age) {
+        return age;
+    }
+};
+const greetPerson = (person) => {
+    console.log(person);
+};
+greetPerson(mohammed);

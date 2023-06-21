@@ -58,4 +58,35 @@ form.addEventListener('submit', (e:Event)=>{
     let prhakim = new prInvoice("hakim","ghernaout",28,"readonly    ");
     prhakim.format();
 // <=
-// Modules 
+// Interfaces 
+// => interfaces enforece   
+
+    interface isPerson {
+        name:String,
+        fname : String,
+        age :number ;
+        talk(a:String): void;
+        SayAge(numb:number):number;
+
+    }
+
+    let mohammed : isPerson = {
+        name : "Mohammed",
+        fname :"ghernaout",
+        age : 60,
+        talk (text : String){
+            console.log("my name is "+ name);
+
+        },
+        SayAge(age : number ){
+            return age ;
+        }
+
+
+    }
+
+    const greetPerson = (person :isPerson)=>{
+        console.log(person);
+    };
+
+    greetPerson(mohammed);
