@@ -95,3 +95,21 @@ ninjaO = {
     familyName: "ghernaout",
     age: 213,
 };
+// <=
+// Functions 
+// =>
+let dateOfBirth = (age) => {
+    return 2023 - age;
+};
+console.log(dateOfBirth(22));
+// parametres 
+let bio = (nom, prenom, age) => {
+    return " ton nom est " + nom + "ton prenom est " + prenom + "ton age est " + age;
+};
+console.log(bio("hakim", "ghernaout")); // we called the bio function with only 2 parameters
+// we can also set a default value to the a parameter 
+let bio1 = (nom, prenom, age = 20) => {
+    console.log(age);
+};
+let funct1 = (a) => {
+};

@@ -128,3 +128,31 @@ obj.age = 230;
         familyName:"ghernaout",
         age:213,
     }
+// <=
+// Functions 
+// =>
+    let dateOfBirth:Function = (age :number)=>{
+        return 2023 - age;
+    }
+    console.log(dateOfBirth(22));
+    // parametres 
+
+    let bio :Function = (nom : String, prenom :String ,  age? /* 
+    this "?"" make the paramter (age) optional  */: number)=>{
+        return " ton nom est "+nom+"ton prenom est " +prenom +"ton age est " + age;
+    }
+
+    console.log(bio("hakim","ghernaout")); // we called the bio function with only 2 parameters
+    // we can also set a default value to the a parameter 
+    let bio1 :Function = (nom : String, prenom :String, age :number = 20):void => {
+        console.log(age);
+    }
+
+
+// type Alias 
+    type numberOrString = number|String;
+    let funct1 = (a:numberOrString)=>{
+        
+    }
+// Function signature 
+    
