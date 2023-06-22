@@ -1,6 +1,7 @@
 "use strict";
 // import export 
 import { Invoice } from "./Invoice.js";
+import { Payment } from "./payment.js";
 // get the form from html 
 let form = document.querySelector(".new-item-form");
 // inputs 
@@ -10,7 +11,14 @@ let details = document.querySelector("#details");
 let amount = document.querySelector("#amount");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("to from => " + tofrom.value + " details " + details.value + " the amount =>");
+    let doc;
+    if (type.value == "Invoice") {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
 // Classes 
 // =>
@@ -21,13 +29,11 @@ luis.format();
 // only object instanciated from Invoice class can be added to the invoices array 
 let invoices = [];
 // we can change the value of class properties 
-luis.name = "hakim";
-hakim.name = "luis";
 invoices.push(luis);
 invoices.push(hakim);
 // access the invoices array  
 invoices.forEach(env => {
-    console.log(env.name, env.prenom, env.age);
+    console.log(env.tofrom, env.amount);
 });
 // all classes properties are public by default let's set all the propeties
 // private
@@ -63,7 +69,7 @@ let docOne;
 let docTwo;
 docOne = new Invoice("maio", "gher", 23);
 docTwo = new Invoice("maio", "gher", 23);
-let docs = [];
-docs.push(docOne);
-docs.push(docTwo);
-console.log(docs);
+let docz = [];
+docz.push(docOne);
+docz.push(docTwo);
+console.log(docz);

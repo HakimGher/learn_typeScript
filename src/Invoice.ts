@@ -1,16 +1,16 @@
-// has formatter interface 
 import { HasFormatter } from "./HasFormatter.js";
 
 export class Invoice implements HasFormatter{
-    name : String;
-    prenom : String;
-    age : number;
 
-constructor(name : String, Fname : String , age : number){
-    this.name =  name;
-    this.prenom = Fname;
-    this.age = age;
+    constructor(readonly tofrom : String, 
+                private details : String ,
+                public amount : number){
+    
+    }
+    format(){
+        console.log(this.tofrom,
+            this.details,
+            this.amount);    
+    }
 }
-format(){
-console.log(this.prenom);    }
-}
+

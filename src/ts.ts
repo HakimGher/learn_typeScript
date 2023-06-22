@@ -1,7 +1,9 @@
 "use strict"
 // import export 
 import { Invoice } from "./Invoice.js"; 
+import { Payment } from "./payment.js";
 import {HasFormatter} from "./HasFormatter.js"
+
 // get the form from html 
     let form =document.querySelector(".new-item-form") as HTMLFormElement;
 
@@ -9,13 +11,21 @@ import {HasFormatter} from "./HasFormatter.js"
 let type = document.querySelector("#type") as HTMLSelectElement;
 let tofrom = document.querySelector("#tofrom") as HTMLInputElement;
 let details = document.querySelector("#details") as HTMLInputElement;
-let amount =document.querySelector("#amount") as HTMLInputElement;
+let amount = document.querySelector("#amount") as HTMLInputElement;
 
-form.addEventListener('submit', (e:Event)=>{
+    
+    
+    form.addEventListener('submit', (e:Event)=>{
+
     e.preventDefault();
-    console.log("to from => "+tofrom.value +" details "+details.value+ " the amount =>");
-
-})
+    let doc : HasFormatter;
+    if (type.value  =="Invoice"){
+        doc = new Invoice(tofrom.value,details.value,amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value,details.value,amount.valueAsNumber);
+    }
+    console.log(doc)});
 
 
 // Classes 
@@ -30,15 +40,14 @@ form.addEventListener('submit', (e:Event)=>{
     let invoices :Invoice[] = [];
 
     // we can change the value of class properties 
-    luis.name = "hakim";
-    hakim.name = "luis";
+
 
     invoices.push(luis);
     invoices.push(hakim);
 
     // access the invoices array  
     invoices.forEach(env=>{
-        console.log(env.name,env.prenom,env.age);
+        console.log(env.tofrom,env.amount);
     })
     // all classes properties are public by default let's set all the propeties
     // private
@@ -99,8 +108,8 @@ form.addEventListener('submit', (e:Event)=>{
     docOne  = new Invoice("maio","gher",23);
     docTwo  = new Invoice("maio","gher",23);
 
-    let docs : HasFormatter[]=[];
-    docs.push(docOne);
-    docs.push(docTwo);
-    console.log(docs);
+    let docz : HasFormatter[]=[];
+    docz.push(docOne);
+    docz.push(docTwo);
+    console.log(docz);
     

@@ -1,10 +1,10 @@
 export class Invoice {
-    constructor(name, Fname, age) {
-        this.name = name;
-        this.prenom = Fname;
-        this.age = age;
+    constructor(tofrom, details, amount) {
+        this.tofrom = tofrom;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
-        console.log(this.prenom);
+        console.log(this.tofrom, this.details, this.amount);
     }
 }
