@@ -1,6 +1,7 @@
 "use strict"
 // import export 
 import { Invoice } from "./Invoice.js"; 
+import {HasFormatter} from "./HasFormatter.js"
 // get the form from html 
     let form =document.querySelector(".new-item-form") as HTMLFormElement;
 
@@ -59,7 +60,7 @@ form.addEventListener('submit', (e:Event)=>{
     prhakim.format();
 // <=
 // Interfaces 
-// => interfaces enforece   
+// => interfaces classes    
 
     interface isPerson {
         name:String,
@@ -90,3 +91,16 @@ form.addEventListener('submit', (e:Event)=>{
     };
 
     greetPerson(mohammed);
+
+
+    let docOne : HasFormatter;
+    let docTwo : HasFormatter;
+
+    docOne  = new Invoice("maio","gher",23);
+    docTwo  = new Invoice("maio","gher",23);
+
+    let docs : HasFormatter[]=[];
+    docs.push(docOne);
+    docs.push(docTwo);
+    console.log(docs);
+    

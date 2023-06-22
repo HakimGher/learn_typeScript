@@ -59,3 +59,11 @@ const greetPerson = (person) => {
     console.log(person);
 };
 greetPerson(mohammed);
+let docOne;
+let docTwo;
+docOne = new Invoice("maio", "gher", 23);
+docTwo = new Invoice("maio", "gher", 23);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
