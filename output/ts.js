@@ -2,23 +2,40 @@
 // import export 
 import { Invoice } from "./Invoice.js";
 import { Payment } from "./payment.js";
-// get the form from html 
+// // get the form from html 
+//     let form =document.querySelector(".new-item-form") as HTMLFormElement;
+// // inputs 
+// let type = document.querySelector("#type") as HTMLSelectElement;
+// let tofrom = document.querySelector("#tofrom") as HTMLInputElement;
+// let details = document.querySelector("#details") as HTMLInputElement;
+// let amount = document.querySelector("#amount") as HTMLInputElement;
+//     form.addEventListener('submit', (e:Event)=>{
+//     e.preventDefault();
+//     let doc : HasFormatter;
+//     if (type.value  =="Invoice"){
+//         doc = new Invoice(tofrom.value,details.value,amount.valueAsNumber);
+//     }
+//     else {
+//         doc = new Payment(tofrom.value,details.value,amount.valueAsNumber);
+//     }
+//     console.log(doc)});
 let form = document.querySelector(".new-item-form");
-// inputs 
+// input 
 let type = document.querySelector("#type");
 let tofrom = document.querySelector("#tofrom");
 let details = document.querySelector("#details");
 let amount = document.querySelector("#amount");
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
     let doc;
-    if (type.value == "Invoice") {
+    e.preventDefault();
+    if (type.value == "invoice") {
         doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+        console.log(doc);
     }
     else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+        console.log(doc);
     }
-    console.log(doc);
 });
 // Classes 
 // =>
@@ -73,3 +90,5 @@ let docz = [];
 docz.push(docOne);
 docz.push(docTwo);
 console.log(docz);
+let partOne;
+let partTwo;

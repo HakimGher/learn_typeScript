@@ -4,30 +4,53 @@ import { Invoice } from "./Invoice.js";
 import { Payment } from "./payment.js";
 import {HasFormatter} from "./HasFormatter.js"
 
-// get the form from html 
-    let form =document.querySelector(".new-item-form") as HTMLFormElement;
+// // get the form from html 
+//     let form =document.querySelector(".new-item-form") as HTMLFormElement;
 
-// inputs 
-let type = document.querySelector("#type") as HTMLSelectElement;
-let tofrom = document.querySelector("#tofrom") as HTMLInputElement;
-let details = document.querySelector("#details") as HTMLInputElement;
-let amount = document.querySelector("#amount") as HTMLInputElement;
+// // inputs 
+// let type = document.querySelector("#type") as HTMLSelectElement;
+// let tofrom = document.querySelector("#tofrom") as HTMLInputElement;
+// let details = document.querySelector("#details") as HTMLInputElement;
+// let amount = document.querySelector("#amount") as HTMLInputElement;
 
     
     
-    form.addEventListener('submit', (e:Event)=>{
+//     form.addEventListener('submit', (e:Event)=>{
+
+//     e.preventDefault();
+//     let doc : HasFormatter;
+//     if (type.value  =="Invoice"){
+//         doc = new Invoice(tofrom.value,details.value,amount.valueAsNumber);
+//     }
+//     else {
+//         doc = new Payment(tofrom.value,details.value,amount.valueAsNumber);
+//     }
+//     console.log(doc)});
+
+let form = document.querySelector(".new-item-form") as HTMLFormElement;
+
+// input 
+ let type = document.querySelector("#type") as HTMLSelectElement;
+ let tofrom = document.querySelector("#tofrom") as HTMLInputElement;
+ let details = document.querySelector("#details") as HTMLInputElement;
+ let amount = document.querySelector("#amount") as HTMLInputElement;
+
+
+ form.addEventListener('submit', (e:Event)=>{
+    let doc : HasFormatter;
 
     e.preventDefault();
-    let doc : HasFormatter;
-    if (type.value  =="Invoice"){
-        doc = new Invoice(tofrom.value,details.value,amount.valueAsNumber);
-    }
+    if (type.value == "invoice"){
+    doc =  new Invoice(tofrom.value ,details.value,amount.valueAsNumber);
+    console.log(doc); }
     else {
-        doc = new Payment(tofrom.value,details.value,amount.valueAsNumber);
-    }
-    console.log(doc)});
+    doc = new Payment(tofrom.value,details.value,amount.valueAsNumber)
+    console.log(doc);
+}
+    
 
 
+ })
 // Classes 
 // =>
     
@@ -113,3 +136,8 @@ let amount = document.querySelector("#amount") as HTMLInputElement;
     docz.push(docTwo);
     console.log(docz);
     
+
+
+    let partOne : HasFormatter;
+    let partTwo : HasFormatter;
+

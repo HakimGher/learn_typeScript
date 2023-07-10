@@ -1,16 +1,29 @@
-import { HasFormatter } from "./HasFormatter.js";
+// import { HasFormatter } from "./HasFormatter";
 
-export class Invoice implements HasFormatter{
+import { HasFormatter } from "./HasFormatter";
 
-    constructor(readonly tofrom : String, 
-                private details : String ,
-                public amount : number){
+// export class Invoice implements HasFormatter{
+
+//     constructor(readonly tofrom : String, 
+//                 private details : String ,
+//                 public amount : number){
     
-    }
-    format(){
-        console.log(this.tofrom,
-            this.details,
-            this.amount);    
-    }
-}
+//     }
+//     format(){
+//         console.log(this.tofrom,
+//             this.details,
+//             this.amount);    
+//     }
+// }
 
+export class Invoice implements HasFormatter {
+    constructor (readonly tofrom :string ,
+        private details : string ,
+        public amount :number ){
+
+        }
+        format(): string {
+            return (
+                this.details,this.tofrom);
+        }
+    }

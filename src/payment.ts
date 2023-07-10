@@ -1,15 +1,14 @@
+
 import { HasFormatter } from "./HasFormatter";
 
 export class Payment implements HasFormatter{
-
-    constructor(readonly recipient : String, 
-                private details : String, 
-                public amount : number){
+constructor (readonly recipient : string , 
+    private details : string , 
+    public amount : number){
 
     }
-    format(){
-        console.log(this.recipient,
-            this.details, 
-            this.amount);
+    format(): string {
+        return(this.recipient,
+            this.details);
     }
 }
