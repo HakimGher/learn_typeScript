@@ -5,6 +5,7 @@ export class Payment {
         this.amount = amount;
     }
     format() {
-        console.log(this.recipient, this.details, this.amount);
+        return (this.recipient,
+            this.details);
     }
 }

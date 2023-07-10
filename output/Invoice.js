@@ -17,6 +17,6 @@ export class Invoice {
         this.amount = amount;
     }
     format() {
-        console.log(this.tofrom, this.details, this.amount);
+        return (this.details, this.tofrom);
     }
 }
