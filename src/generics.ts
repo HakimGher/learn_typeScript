@@ -12,3 +12,21 @@ return {...obj,uid}
     console.log(docOne.name);
     console.log(docOne.familyName);
 
+    interface Resource <T> {
+        uid : number ,
+        resourceName : string,
+        data : T,
+    }
+
+    let docTwo : Resource <number> = {
+        uid :123,
+        resourceName : "docTwo",
+        data : 1024,
+    }
+
+    let docThree : Resource <string[]> = 
+    {
+        uid : 124,
+        resourceName :"docThree",
+        data : ["one","two","three","four"],
+    }

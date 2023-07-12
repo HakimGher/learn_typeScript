@@ -8,3 +8,13 @@ console.log(docOne);
 // without generic we cant access the object properties 
 console.log(docOne.name);
 console.log(docOne.familyName);
+let docTwo = {
+    uid: 123,
+    resourceName: "docTwo",
+    data: 1024,
+};
+let docThree = {
+    uid: 124,
+    resourceName: "docThree",
+    data: ["one", "two", "three", "four"],
+};
