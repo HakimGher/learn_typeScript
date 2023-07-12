@@ -5,7 +5,7 @@
 ,
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "outDir": "./output", // Replace "./dist" with the desired output directory path
+    "outDir": "./output/js/", // Replace "./dist" with the desired output directory path
 
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
