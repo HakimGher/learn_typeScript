@@ -30,3 +30,11 @@ return {...obj,uid}
         resourceName :"docThree",
         data : ["one","two","three","four"],
     }
+
+    // The spread operator return all elements of an array 
+    const spread  = ()=>{
+        let myArr = [1, 2, 3];
+        return [1, 2, 3];
+        //is the same as:
+        return [...myArr];
+    }
