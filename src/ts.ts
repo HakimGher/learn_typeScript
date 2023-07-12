@@ -4,6 +4,7 @@ import { Invoice } from "./Invoice.js";
 import { Payment } from "./payment.js";
 import {HasFormatter} from "./HasFormatter.js"
 import { listTemplate } from "./listTemplate.js";
+import * as generics from "./generics.js";
 
 // // get the form from html 
 //     let form =document.querySelector(".new-item-form") as HTMLFormElement;
@@ -56,6 +57,7 @@ const ul = document.querySelector("ul")!;
 }
     
  )
+
 
 //  )
 // // Classes 
@@ -147,4 +149,7 @@ const ul = document.querySelector("ul")!;
 
 //     let partOne : HasFormatter;
 //     let partTwo : HasFormatter;
+
+
+
 
