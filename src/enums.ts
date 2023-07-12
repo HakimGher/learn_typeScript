@@ -21,3 +21,4 @@ let docTwo :resource <number> = {
     resourceType : resourceType.AUTHOR,
     data: 222,
 }
+console.log(docOne,docTwo);
